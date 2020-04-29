@@ -2,7 +2,7 @@
     <div id="app" class="c-flex c-flex-column full-height">
         <TopNav />
         <div class="c-flex">
-            <div class="c-flex side-nav">Side nav </div>
+            <div class="c-flex side-nav">Side navbar </div>
             <div class="c-flex main-content">
                 <router-view></router-view>
             </div>
