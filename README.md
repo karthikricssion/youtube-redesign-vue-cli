@@ -1,24 +1,14 @@
 # youtube-redesign
 
-## Project setup
-```
-npm install
-```
+Reference redesign layouts got from the internet.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+![alt youtube redesign 1](https://assets.materialup.com/uploads/13405b0c-2774-454b-b025-746bacf46f25/preview.png)
+[Source](https://www.pinterest.com/pin/347410558745211178/)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+![alt youtube redesign 2](https://i.pinimg.com/originals/5f/9c/bf/5f9cbf3e2d7407cc54ba8f796f83677b.jpg)
+[Source](https://www.uplabs.com/challenges/youtube-redesign-challenge-e5a25595-1c32-4180-b379-8e0a832b189d)
 
-### Lints and fixes files
-```
-npm run lint
-```
+![alrt youtube redsign 3](https://caphe.sfo2.cdn.digitaloceanspaces.com/assets/images/youtube-redesign.png)
+[Source](https://www.uistore.design/items/youtube-redesign/)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
