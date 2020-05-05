@@ -2,7 +2,7 @@
     <div id="app" class="c-flex c-flex-column full-height">
         <TopNav />
         <div class="c-flex">
-            <div class="c-flex side-nav">Side navbar </div>
+            <SideNave />
             <div class="c-flex main-content">
                 <router-view></router-view>
             </div>
@@ -12,19 +12,23 @@
 
 <script>
     import TopNav from './components/top-nav'
+    import SideNave from './components/side-nav'
 
     export default {
         name: 'App',
         components: {
-            TopNav
+            TopNav,
+            SideNave
         }
     }
 
 </script>
 
-<style lang="less">
+<style lang="less">    
+    @import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+    
     html, body {
-        background-color: #fbfbfc;
+        background-color: #fff;
         color: #182128;
         width: 100%;
         height: 100%;
