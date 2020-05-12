@@ -54,14 +54,79 @@
                 <div class="side-menu-user-subscriptions">
                     <h5>Subscriptions</h5>
                     <div class="user-subscribed-list">
-                        <div class="c-flex single-user-subscribed-channel">
-                            <div class="c-flex channel-thumbnail">
-                                <img src="https://randomuser.me/api/portraits/med/men/75.jpg" class="img-responsive" />
+
+                        <div class="single-user-subscribed-channel">
+                            <div class="channel-thumbnail">
+                                <div class="thumbnail-holder">
+                                    <img src="https://randomuser.me/api/portraits/med/women/68.jpg" class="img-responsive" />
+                                </div>
                             </div>
-                            <div class="c-flex">
-                                <span class="channel-name">Eleftheria Batsou Eleftheria Batsou</span>
+                            <div class="channel-description">
+                                <p class="channel-name">Holly Burke</p>
                             </div>
                         </div>
+
+                        <div class="single-user-subscribed-channel">
+                            <div class="channel-thumbnail">
+                                <div class="thumbnail-holder">
+                                    <img src="https://randomuser.me/api/portraits/med/men/75.jpg" class="img-responsive" />
+                                </div>
+                            </div>
+                            <div class="channel-description">
+                                <p class="channel-name">Eleftheria Batsou
+                                    <span class="notify"></span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="single-user-subscribed-channel">
+                            <div class="channel-thumbnail">
+                                <div class="thumbnail-holder">
+                                    <img src="https://randomuser.me/api/portraits/med/men/10.jpg" class="img-responsive" />
+                                </div>
+                            </div>
+                            <div class="channel-description">
+                                <p class="channel-name">Roy Byrd
+                                    <span class="notify"></span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="single-user-subscribed-channel">
+                            <div class="channel-thumbnail">
+                                <div class="thumbnail-holder">
+                                    <img src="https://randomuser.me/api/portraits/med/men/76.jpg" class="img-responsive" />
+                                </div>
+                            </div>
+                            <div class="channel-description">
+                                <p class="channel-name">Gavin Edwards</p>
+                            </div>
+                        </div>
+
+                        <div class="single-user-subscribed-channel">
+                            <div class="channel-thumbnail">
+                                <div class="thumbnail-holder">
+                                    <img src="https://randomuser.me/api/portraits/med/women/75.jpg" class="img-responsive" />
+                                </div>
+                            </div>
+                            <div class="channel-description">
+                                <p class="channel-name">Colleen Evans</p>
+                            </div>
+                        </div>
+
+                        <div class="single-user-subscribed-channel">
+                            <div class="channel-thumbnail">
+                                <div class="thumbnail-holder">
+                                    <img src="https://randomuser.me/api/portraits/med/women/60.jpg" class="img-responsive" />
+                                </div>
+                            </div>
+                            <div class="channel-description">
+                                <p class="channel-name">Bobbie Gibson
+                                    <span class="notify"></span>
+                                </p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -142,7 +207,10 @@ export default {
     .s-nav-link {
         display: block;
         padding: 8px 16px;
-        color: #5f5f5f;
+        color: #abacac;
+        font-weight: 300;
+        cursor: pointer;
+        user-select: none;
 
         .material-design-icon {
             display: inline-block;
@@ -157,9 +225,11 @@ export default {
             margin-left: 5px;
         }
 
-        &.active-link {
-            // background-color: #e5e5e5;
+        &:hover {
+            opacity: 0.8;
+        }
 
+        &.active-link {
             .material-design-icon {
                 color: #ed3833;
             }   
@@ -174,24 +244,52 @@ export default {
     .user-subscribed-list {
         .single-user-subscribed-channel {
             padding: 8px 16px;
+            display: flex;
+            cursor: pointer;
+            user-select: none;
 
-            .channel-thumbnail {
-                width: 24px;
-                height: 24px;
-                flex: 0 0 24px;
-                border-radius: 505%;
-                overflow: hidden;
+            &:hover {
+                opacity: 0.8;
             }
 
-            .channel-name {
-                display: block;
-                overflow: hidden;
-                font-size: 14px;
-                padding: 3px 8px;
-                height: 24px;
+            .channel-thumbnail {
                 white-space: nowrap;
-                color: #5e5e5e;
-                text-overflow: ellipsis;
+
+                .thumbnail-holder {
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 505%;
+                    overflow: hidden;
+                }
+            }
+
+            .channel-description {
+                flex: 1;
+                min-width: 0;
+                position: relative;
+
+                .channel-name {
+                    font-size: 14px;
+                    padding: 3px 8px;
+                    margin: 0;
+                    color: #abacac;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    font-weight: 300;
+                    padding-right: 16px;
+
+
+                    .notify {
+                        position: absolute;
+                        background-color: #065fd4;
+                        width: 4px;
+                        height: 4px;
+                        top: 12px;
+                        right: 0;
+                        border-radius: 50%;
+                    }
+                }
             }
         }   
     }

@@ -12,3 +12,6 @@ Reference redesign layouts got from the internet.
 [Source](https://www.uistore.design/items/youtube-redesign/)
 
 
+Ref: 
+FLEX 
+https://css-tricks.com/flexbox-truncated-text/

@@ -55,6 +55,7 @@
         display: -webkit-flex;     /* NEW - Chrome */
         display:flex;
         flex: 1 0 0;
+        min-width: 0;
     }
 
     .c-flex-column {
