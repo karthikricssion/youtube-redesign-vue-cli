@@ -13,3 +13,6 @@ updated [Demo](https://zen-golick-ec2639.netlify.app/)
 
 ### Ref: 
 https://css-tricks.com/flexbox-truncated-text/
+
+### Images used inside application 
+https://www.freepik.com/free-photo/rear-view-female-hiker-with-arm-raised_2618078.htm#page=1&query=travel&position=12
