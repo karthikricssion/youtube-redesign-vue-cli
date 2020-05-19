@@ -54,79 +54,14 @@
                 <div class="side-menu-user-subscriptions">
                     <h5>Subscriptions</h5>
                     <div class="user-subscribed-list">
-
-                        <div class="single-user-subscribed-channel">
-                            <div class="channel-thumbnail">
-                                <div class="thumbnail-holder">
-                                    <img src="https://randomuser.me/api/portraits/med/women/68.jpg" class="img-responsive" />
-                                </div>
-                            </div>
-                            <div class="channel-description">
-                                <p class="channel-name">Holly Burke</p>
-                            </div>
-                        </div>
-
-                        <div class="single-user-subscribed-channel">
-                            <div class="channel-thumbnail">
-                                <div class="thumbnail-holder">
-                                    <img src="https://randomuser.me/api/portraits/med/men/75.jpg" class="img-responsive" />
-                                </div>
-                            </div>
-                            <div class="channel-description">
-                                <p class="channel-name">Eleftheria Batsou
-                                    <span class="notify"></span>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="single-user-subscribed-channel">
-                            <div class="channel-thumbnail">
-                                <div class="thumbnail-holder">
-                                    <img src="https://randomuser.me/api/portraits/med/men/10.jpg" class="img-responsive" />
-                                </div>
-                            </div>
-                            <div class="channel-description">
-                                <p class="channel-name">Roy Byrd
-                                    <span class="notify"></span>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="single-user-subscribed-channel">
-                            <div class="channel-thumbnail">
-                                <div class="thumbnail-holder">
-                                    <img src="https://randomuser.me/api/portraits/med/men/76.jpg" class="img-responsive" />
-                                </div>
-                            </div>
-                            <div class="channel-description">
-                                <p class="channel-name">Gavin Edwards</p>
-                            </div>
-                        </div>
-
-                        <div class="single-user-subscribed-channel">
-                            <div class="channel-thumbnail">
-                                <div class="thumbnail-holder">
-                                    <img src="https://randomuser.me/api/portraits/med/women/75.jpg" class="img-responsive" />
-                                </div>
-                            </div>
-                            <div class="channel-description">
-                                <p class="channel-name">Colleen Evans</p>
-                            </div>
-                        </div>
-
-                        <div class="single-user-subscribed-channel">
-                            <div class="channel-thumbnail">
-                                <div class="thumbnail-holder">
-                                    <img src="https://randomuser.me/api/portraits/med/women/60.jpg" class="img-responsive" />
-                                </div>
-                            </div>
-                            <div class="channel-description">
-                                <p class="channel-name">Bobbie Gibson
-                                    <span class="notify"></span>
-                                </p>
-                            </div>
-                        </div>
-
+                        <singleChannelHead 
+                            v-for="(val, key) in channelsList"
+                            :key="key"
+                            :name="val.name" 
+                            :src='val.imgURL' 
+                            :size="24" 
+                            :isNotify="val.isNotify" 
+                        />
                     </div>
                 </div>
             </div>
@@ -155,6 +90,8 @@ import LikeOutlineIcon from 'vue-material-design-icons/HeartOutline'
 import MusicIcon from 'vue-material-design-icons/MusicBoxOutline';
 import SettingsOutlineIcon from 'vue-material-design-icons/CogOutline';
 
+import singleChannelHead from '../single.channel.heading';
+
 export default {
     name: 'sideNave',
     components: {
@@ -167,7 +104,49 @@ export default {
         LikeOutlineIcon,
         FavOutlineIcon,
         MusicIcon,
-        SettingsOutlineIcon
+        SettingsOutlineIcon,
+        singleChannelHead
+    },
+    data() {
+        return {
+            channelsList: [
+                {
+                    name: "Bobbie Gibson",
+                    imgURL: 'https://randomuser.me/api/portraits/med/men/75.jpg',
+                    isNotify: true
+                },
+                {
+                    name: 'Colleen Evans',
+                    imgURL: 'https://randomuser.me/api/portraits/med/women/75.jpg',
+                    isNotify: false
+                },
+                {
+                    name: 'Gavin Edwards',
+                    imgURL: '',
+                    isNotify: true
+                },
+                {
+                    name: 'Roy Byrd',
+                    imgURL: 'https://randomuser.me/api/portraits/med/men/10.jpg',
+                    isNotify: false
+                },
+                {
+                    name: 'Eleftheria Batsou',
+                    imgURL: 'https://randomuser.me/api/portraits/med/men/75.jpg',
+                    isNotify: true
+                },
+                {
+                    name: 'Sophia Hansen',
+                    imgURL: 'https://randomuser.me/api/portraits/med/women/68.jpg',
+                    isNotify: false
+                },
+                {
+                    name: 'Holly Burke',
+                    imgURL: '',
+                    isNotify: false
+                }
+            ]
+        }
     }
 }
 </script>
@@ -208,7 +187,7 @@ export default {
         display: block;
         padding: 8px 16px;
         color: #abacac;
-        font-weight: 300;
+        font-weight: 400;
         cursor: pointer;
         user-select: none;
 
@@ -236,62 +215,9 @@ export default {
 
             .nav-title {
                 color: #333;
-                font-weight: 700;
+                font-weight: 500;
             }
         }
-    }
-
-    .user-subscribed-list {
-        .single-user-subscribed-channel {
-            padding: 8px 16px;
-            display: flex;
-            cursor: pointer;
-            user-select: none;
-
-            &:hover {
-                opacity: 0.8;
-            }
-
-            .channel-thumbnail {
-                white-space: nowrap;
-
-                .thumbnail-holder {
-                    width: 24px;
-                    height: 24px;
-                    border-radius: 505%;
-                    overflow: hidden;
-                }
-            }
-
-            .channel-description {
-                flex: 1;
-                min-width: 0;
-                position: relative;
-
-                .channel-name {
-                    font-size: 14px;
-                    padding: 3px 8px;
-                    margin: 0;
-                    color: #abacac;
-                    white-space: nowrap;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    font-weight: 300;
-                    padding-right: 16px;
-
-
-                    .notify {
-                        position: absolute;
-                        background-color: #065fd4;
-                        width: 4px;
-                        height: 4px;
-                        top: 12px;
-                        right: 0;
-                        border-radius: 50%;
-                    }
-                }
-            }
-        }   
     }
 }
 </style>
