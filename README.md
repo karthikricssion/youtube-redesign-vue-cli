@@ -1,10 +1,9 @@
 # youtube-redesign
+Working on designs that inspired from dribble and other sites. Learning to use Vue-cli
+updated [Demo](https://zen-golick-ec2639.netlify.app/)
 
-Reference redesign layouts got from the internet.
 
-![alt youtube redesign 1](https://assets.materialup.com/uploads/13405b0c-2774-454b-b025-746bacf46f25/preview.png)
-[Source](https://www.pinterest.com/pin/347410558745211178/)
-
+#### Reference redesign layouts got from the internet.
 ![alt youtube redesign 2](https://i.pinimg.com/originals/5f/9c/bf/5f9cbf3e2d7407cc54ba8f796f83677b.jpg)
 [Source](https://www.uplabs.com/challenges/youtube-redesign-challenge-e5a25595-1c32-4180-b379-8e0a832b189d)
 
@@ -12,6 +11,5 @@ Reference redesign layouts got from the internet.
 [Source](https://www.uistore.design/items/youtube-redesign/)
 
 
-Ref: 
-FLEX 
+### Ref: 
 https://css-tricks.com/flexbox-truncated-text/
