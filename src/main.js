@@ -8,6 +8,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import VueCarousel from 'vue-carousel';
 
 import router from './routers'
 import App from './App.vue'
@@ -16,6 +17,7 @@ library.add(faUserSecret, faYoutube)
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
+Vue.use(VueCarousel);
 Vue.component(VueMaterialIcon.name, VueMaterialIcon)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

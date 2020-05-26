@@ -1,9 +1,9 @@
 <template>
     <div id="app" class="c-flex c-flex-column full-height">
         <TopNav />
-        <div class="c-flex">
+        <div class="c-flex full-height">
             <SideNave />
-            <div class="c-flex main-content">
+            <div class="c-flex main-content full-height">
                 <router-view></router-view>
             </div>
         </div>
